@@ -80,12 +80,15 @@ module testbench();
 
         $display ("Power Setting - %3b", out);
 
-        if(out == {3'b001})
+        if(out == {3'b001}) begin
             $display ("Power Setting - Training");
-        else if (out == {3'b010}) begin
+        end else if (out == {3'b010}) begin
             $display ("Power Setting - Dueling");
-        end else 
+        end else if (out == {3'b100}) begin
             $display ("Power Setting - Bulkhead");
+        end else begin
+            $display ("Power Setting - Error - Bad Input");
+        end
 
 
         #15
@@ -97,12 +100,15 @@ module testbench();
         $display ("");
         $display ("Power Setting - %3b", out);
 
-        if(out == {3'b001})
+       if(out == {3'b001}) begin
             $display ("Power Setting - Training");
-        else if (out == {3'b010}) begin
+        end else if (out == {3'b010}) begin
             $display ("Power Setting - Dueling");
-        end else 
+        end else if (out == {3'b100}) begin
             $display ("Power Setting - Bulkhead");
+        end else begin
+            $display ("Power Setting - Error - Bad Input");
+        end
 
         #15
 
@@ -113,12 +119,15 @@ module testbench();
         $display ("");
         $display ("Power Setting - %3b", out);
 
-        if(out == {3'b001})
+       if(out == {3'b001}) begin
             $display ("Power Setting - Training");
-        else if (out == {3'b010}) begin
+        end else if (out == {3'b010}) begin
             $display ("Power Setting - Dueling");
-        end else 
+        end else if (out == {3'b100}) begin
             $display ("Power Setting - Bulkhead");
+        end else begin
+            $display ("Power Setting - Error - Bad Input");
+        end
 
 
     
