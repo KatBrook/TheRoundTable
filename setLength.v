@@ -53,6 +53,10 @@ module checkLength(bladeConfig, maxL, maxR, floatL, floatR, hiltLength, lengthL,
 	    if(bladeConfig == 0)
 	    begin
 		$display("No blade configuration, cannot set the blade length.");
+
+		lengthL = 0;
+		lengthR = 0;
+		lengthH = 0;
 	    end
 	    else
 	    begin
@@ -66,7 +70,7 @@ module checkLength(bladeConfig, maxL, maxR, floatL, floatR, hiltLength, lengthL,
 		end
 		else if(floatL == 0 && floatR == 0)  //0.0 -> reject, set to 0.5 m
 		begin
-			$display("If Master Yoda needs a blande length greater than 0.0 m to fight Darth Vader, then I highly doubt you can go without a blade at all.");
+			$display("If Master Yoda needs a blade length greater than 0.0 m to fight Darth Vader, then I highly doubt you can go without a blade at all.");
 			$display("The blade length has been set to 0.5 meters to try and counteract your hubris.");
 
 			lengthL = 0;
